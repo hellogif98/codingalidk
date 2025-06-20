@@ -1,16 +1,22 @@
+# Program to find the 0 bits and 1 bits present in a number
 
-#open file and read its contents 
-file = open('ok.txt','r')
-print(file.read())
-file.close()
+# Functions taking our number as input
+def numberOfBits(n):
+    ones = 0
+    zero = 0
 
-#open file and read uts begining in 8 characters 
-file = open('ok.txt','r')
-print("/n Read in parts \n")
-print(file.read(8))
-file.close()
+    # While number is greater check last but and right shift
+    While (n):
 
-#append your name and age in the file 
-file = open('ok.txt','a')
-file.write ("hello i am a cow that is 55 years old ")
-file.close()
+    # Use AND operater to check if last bit is 1 or 0
+    if(n&1==1):
+        ones+=1
+    else:
+        zero+=1
+    # Right shift the number remove the last bit we just checked above
+    n>>=1
+    print("/n/n0nes =", ones,"/nZer0s", zeros)
+
+    
+int(input("Enter your number : "))
+numberOfBits(number)
